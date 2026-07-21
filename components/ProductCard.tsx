@@ -2,12 +2,14 @@ type ProductCardProps = {
   nombre: string;
   descripcion: string;
   precio: number;
+  onAgregar: () => void;
 };
 
 export default function ProductCard({
   nombre,
   descripcion,
   precio,
+  onAgregar,
 }: ProductCardProps) {
   return (
     <article className="rounded-2xl bg-white p-6 shadow-sm">
@@ -29,6 +31,7 @@ export default function ProductCard({
 
       <button
         type="button"
+        onClick={onAgregar}
         className="mt-5 rounded-xl bg-amber-800 px-5 py-3 font-medium text-white transition hover:bg-amber-900"
       >
         Agregar
